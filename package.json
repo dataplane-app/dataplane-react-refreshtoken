@@ -1,0 +1,67 @@
+{
+  "name": "@dataplane-app/react-refreshtoken-lib",
+  "author": "Saul Frank",
+  "license": "MIT",
+  "version": "0.0.0",
+  "description": "Dataplane - React Refresh Token Library",
+  "main": "dist/index.js",
+  "module": "dist/index.modern.js",
+  "source": "src/index.jsx",
+  "engines": {
+    "node": ">=10"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/dataplane-app"
+  },
+  "scripts": {
+    "build": "microbundle-crl --no-compress --format modern,cjs,esm ",
+    "start": "microbundle-crl watch --no-compress --format modern,cjs,esm",
+    "yalc:publish": "yarn build && yalc publish",
+    "yalc:update": "npm run build && yalc push",
+    "test": "run-s test:unit test:lint test:build",
+    "test:build": "run-s build",
+    "test:lint": "eslint .",
+    "test:unit": "cross-env CI=1 react-scripts test --env=jsdom",
+    "test:watch": "react-scripts test --env=jsdom"
+  },
+  "dependencies": {
+    "@fingerprintjs/fingerprintjs": "^3.1.2",
+    "@hookstate/core": "^3.0.8",
+    "anylogger": "1.0.11",
+    "axios": "0.20.0",
+    "immer-reducer": "0.7.10",
+    "jwt-decode": "3.1.2",
+    "query-string": "6.14.1",
+    "react-idle-timer": "4.6.2",
+    "react-router-dom": "5.2.0",
+    "ulog": "2.0.0-beta.18",
+    "use-query-params": "1.2.2"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "cross-env": "^7.0.2",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard": "^14.1.0",
+    "eslint-config-standard-react": "^9.2.0",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-node": "^11.0.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.17.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "microbundle-crl": "^0.13.10",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.0.4",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-scripts": "4.0.3"
+  },
+  "files": [
+    "dist"
+  ]
+}
