@@ -51,6 +51,7 @@ jobs:
           DEFAULT_BRANCH: release
 
       - name: YARN Publish 
-        run: yarn publish
+        run: yarn publish --access public
         env:
           DEFAULT_BRANCH: release
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
