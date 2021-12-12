@@ -39,11 +39,6 @@ jobs:
         env:
           DEFAULT_BRANCH: release
 
-      - name: YARN Build        
-        run: yarn build
-        env:
-          DEFAULT_BRANCH: release
-
       - name: YARN Publish 
         run: yarn publish --access public
         env:
