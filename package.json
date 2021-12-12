@@ -2,7 +2,7 @@
   "name": "@dataplane-app/dataplane-react-refreshtoken",
   "author": "Saul Frank",
   "license": "MIT",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Dataplane - React Refresh Token Library",
   "main": "dist/index.js",
   "module": "dist/index.modern.js",
