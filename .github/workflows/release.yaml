@@ -35,7 +35,7 @@ jobs:
           key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
       
       - name: YARN Install
-        run: yarn install
+        run: yarn install --production --frozen-lockfile
         env:
           DEFAULT_BRANCH: release
 
@@ -48,4 +48,4 @@ jobs:
         run: yarn publish --access public
         env:
           DEFAULT_BRANCH: release
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
