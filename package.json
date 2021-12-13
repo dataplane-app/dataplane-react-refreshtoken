@@ -1,5 +1,5 @@
 {
-  "name": "@dataplane-app/dataplane-react-refreshtoken",
+  "name": "@dataplane/dataplane-react-refreshtoken",
   "author": "Saul Frank",
   "license": "MIT",
   "version": "0.0.5",
@@ -11,7 +11,7 @@
     "node": ">=10"
   },
   "publishConfig": {
-    "registry": "https://npm.pkg.github.com/dataplane-app"
+    "registry": "https://registry.npmjs.org/dataplane"
   },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs,esm ",
