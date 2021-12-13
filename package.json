@@ -10,9 +10,6 @@
   "engines": {
     "node": ">=10"
   },
-  "publishConfig": {
-    "registry": "https://registry.npmjs.org/dataplane"
-  },
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs,esm ",
     "start": "microbundle-crl watch --no-compress --format modern,cjs,esm",

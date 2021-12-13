@@ -38,9 +38,9 @@ jobs:
         run: yarn install --production --frozen-lockfile
         env:
           DEFAULT_BRANCH: release
-
+      
+      - name: NPM auth 
+        run: npm config set '//registry.npmjs.org/:_authToken' "${{ secrets.NPMPUBLISH }}"
+        
       - name: YARN Publish 
         run: yarn publish --access public
-        env:
-          DEFAULT_BRANCH: release
-          NPM_AUTH_TOKEN: ${{ secrets.NPMPUBLISH }}
