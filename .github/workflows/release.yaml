@@ -16,7 +16,7 @@ jobs:
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-          # scope: "@dataplane-app"
+          scope: "@dataplane"
           # Defaults to the user or organization that owns the workflow file
 
       - name: Automated Version Bump
@@ -43,4 +43,4 @@ jobs:
         run: yarn publish --access public
         env:
           DEFAULT_BRANCH: release
-          NODE_AUTH_TOKEN: ${{ secrets.NPMPUBLISH }}
+          NPM_AUTH_TOKEN: ${{ secrets.NPMPUBLISH }}
