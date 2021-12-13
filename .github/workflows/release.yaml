@@ -15,8 +15,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
-          registry-url: 'https://npm.pkg.github.com'
-          scope: "@dataplane-app"
+          registry-url: 'https://registry.npmjs.org'
+          # scope: "@dataplane-app"
           # Defaults to the user or organization that owns the workflow file
 
       - name: Automated Version Bump
@@ -43,4 +43,4 @@ jobs:
         run: yarn publish --access public
         env:
           DEFAULT_BRANCH: release
-          NPM_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPMPUBLISH }}
